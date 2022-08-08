@@ -1,4 +1,4 @@
-export interface ICategoryProduct {
+export interface IProductCard {
   id: string;
   title: string;
   price: number;
@@ -7,4 +7,5 @@ export interface ICategoryProduct {
   rating: number;
   image: string;
   isSale?: boolean;
+  url: string;
 }

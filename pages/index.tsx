@@ -12,8 +12,9 @@ const DEFAULTLIST = [
     weight: 500,
     rating: 4.5,
     image: 'img',
-    title: 'product',
+    title: 'Blackberry bluestem',
     isSale: true,
+    url: 'product1',
   },
   {
     id: '2',
@@ -21,8 +22,9 @@ const DEFAULTLIST = [
     weight: 500,
     rating: 4.5,
     image: 'img',
-    title: 'product',
+    title: 'Blueberries',
     isSale: true,
+    url: 'product2',
   },
   {
     id: '3',
@@ -30,8 +32,9 @@ const DEFAULTLIST = [
     weight: 500,
     rating: 4,
     image: 'img',
-    title: 'product',
+    title: 'White grapes muscat',
     isSale: true,
+    url: 'product3',
   },
   {
     id: '4',
@@ -39,8 +42,19 @@ const DEFAULTLIST = [
     weight: 500,
     rating: 5,
     image: 'img',
-    title: 'product',
+    title: 'Yellow buckthorn',
     isSale: true,
+    url: 'product4',
+  },
+  {
+    id: '4',
+    price: 123,
+    weight: 500,
+    rating: 5,
+    image: 'img',
+    title: 'Raspberry',
+    isSale: true,
+    url: 'product4',
   },
 ];
 
@@ -50,9 +64,7 @@ const Home: NextPage = () => {
       <Section>
         <LineCategory list={DEFAULTLIST} />
       </Section>
-      <Section>
-        Category
-      </Section>
+      <Section>Category</Section>
     </MainLayout>
   );
 };

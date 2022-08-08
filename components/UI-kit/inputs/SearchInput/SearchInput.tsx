@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { RiSearchLine } from "react-icons/ri";
+import { RiSearchLine } from 'react-icons/ri';
 
 interface InputProps {
   value?: string;
@@ -10,7 +10,7 @@ interface InputProps {
 const SearchInput = ({ value, onChange }: InputProps) => (
   <Wrapper>
     <Icon />
-    <Input value={value} onChange={onChange} placeholder='Search' />
+    <Input value={value} onChange={onChange} placeholder="Search" />
   </Wrapper>
 );
 
@@ -31,7 +31,7 @@ const Input = styled.input`
   border: none;
   border-radius: 5px;
   width: 160px;
-  background-color: ${(p) => p.theme.colors.light};
+  background-color: ${(p) => p.theme.colors.contrast};
   transition: ${(p) => p.theme.transitions.main} width;
 
   &:active,

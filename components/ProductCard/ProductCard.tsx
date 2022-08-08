@@ -1,6 +1,23 @@
-import styled from "styled-components";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { ICategoryProduct } from "interfaces/ICategoryProduct";
+import { IProductCard } from 'interfaces/IProductCard';
+
+import {
+  Wrapper,
+  Container,
+  TopBlock,
+  Title,
+  Rating,
+  StarIcons,
+  StarRating,
+  SaleBadge,
+  RatingWrapper,
+  BottomBlock,
+  PriceWrapper,
+} from './ProductCard.styles';
+
+import testimage from 'assets/white_grapes_muscat.png';
 
 const ProductCard = ({
   id,
@@ -11,22 +28,36 @@ const ProductCard = ({
   rating,
   image,
   isSale,
-}: ICategoryProduct) => (
-  <Wrapper>
-    <img src={image} />
-    <h3>{title}</h3>
-    <div>
-      {price}
-      {discount ?? discount}
-    </div>
-    <div>/ {weight}g</div>
-    <div>{rating} / 5</div>
-    {isSale ? <div>Sale</div> : null}
-  </Wrapper>
-);
+  url,
+}: IProductCard) => (
+  <Link href={`/product/${url}`}>
+    <Wrapper>
+      <Container />
 
-const Wrapper = styled.div`
-  display: flex;
-`;
+      <TopBlock>
+        <Image src={testimage} alt={title} width="116" height="114" />
+        <RatingWrapper>
+          <Rating>
+            <StarIcons />
+            <StarRating>{rating}/5</StarRating>
+          </Rating>
+          {isSale ? <SaleBadge>On sale</SaleBadge> : null}
+        </RatingWrapper>
+      </TopBlock>
+
+      <Title>{title}</Title>
+
+      <BottomBlock>
+        <button>Add +</button>
+
+        <PriceWrapper>
+          {price}
+          {discount ?? discount}
+          <div>/ {weight}g</div>
+        </PriceWrapper>
+      </BottomBlock>
+    </Wrapper>
+  </Link>
+);
 
 export default ProductCard;

@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import { IProductCard } from 'interfaces/IProductCard';
 
-import { ICategoryProduct } from "interfaces/ICategoryProduct";
+import ProductCard from 'components/ProductCard';
 
-import ProductCard from "components/ProductCard";
+import { List, Item } from './LineCategory.styles';
 
 interface LineCategoryProps {
-  list: ICategoryProduct[];
+  list: IProductCard[];
 }
 
 const LineCategory = ({ list }: LineCategoryProps) => {
@@ -21,9 +21,5 @@ const LineCategory = ({ list }: LineCategoryProps) => {
 
   return <List>{renderList()}</List>;
 };
-
-const List = styled.ul``;
-
-const Item = styled.li``;
 
 export default LineCategory;
