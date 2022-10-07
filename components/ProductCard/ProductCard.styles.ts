@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillStar, AiOutlinePlus } from 'react-icons/ai';
 
 export const Wrapper = styled.a`
   position: relative;
@@ -10,6 +10,11 @@ export const Wrapper = styled.a`
   width: 266px;
   height: 266px;
   padding: 0px 24px 24px 24px;
+  border-radius: 24px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Container = styled.div`
@@ -21,6 +26,12 @@ export const Container = styled.div`
   height: 228px;
   background-color: ${(p) => p.theme.colors.contrast};
   border-radius: 24px;
+  box-shadow: ${(p) => p.theme.shadows.card};
+  transition: ${(p) => p.theme.transitions.main} box-shadow;
+
+  ${Wrapper}:hover > & {
+    box-shadow: ${(p) => p.theme.shadows.hover};
+  }
 `;
 
 export const TopBlock = styled.div`
@@ -87,4 +98,48 @@ export const PriceWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+`;
+
+export const Discount = styled.span`
+  color: ${(p) => p.theme.colors.primary};
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: line-through;
+`;
+
+export const Price = styled.span`
+  color: ${(p) => p.theme.colors.accent};
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+`;
+
+export const Weight = styled.span`
+  color: ${(p) => p.theme.colors.fade};
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+`;
+
+export const ClearButton = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: ${(p) => p.theme.colors.primary};
+  background-color: transparent;
+  border: 1px solid ${(p) => p.theme.colors.secondary};
+  border-radius: 10px;
+  transition: ${(p) => p.theme.transitions.main} background-color;
+
+  &:hover {
+    cursor: pointer;
+    color: ${(p) => p.theme.colors.contrast};
+    background-color: ${(p) => p.theme.colors.alt};
+  }
+`;
+
+export const PlusIcon = styled(AiOutlinePlus)`
+  margin-left: 16px;
+  font-size: 22px;
 `;

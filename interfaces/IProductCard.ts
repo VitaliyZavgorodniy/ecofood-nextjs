@@ -6,6 +6,5 @@ export interface IProductCard {
   weight: number;
   rating: number;
   image: string;
-  isSale?: boolean;
   url: string;
 }
