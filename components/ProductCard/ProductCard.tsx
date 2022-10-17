@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { MouseEvent } from 'react';
 
-import { IProductCard } from 'interfaces/IProductCard';
+import { IProductData } from 'interfaces/IProductData';
 
 import {
   Wrapper,
@@ -33,10 +34,10 @@ const ProductCard = ({
   rating,
   image,
   url,
-}: IProductCard) => {
-  const handleAddToCart = (e: any) => {
+}: IProductData) => {
+  const handleAddToCart = (e: MouseEvent) => {
     e.preventDefault();
-    console.log('Go');
+    console.log('Added to Cart:', title);
   };
 
   return (

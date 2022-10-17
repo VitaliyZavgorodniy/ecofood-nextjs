@@ -1,11 +1,11 @@
-import { IProductCard } from 'interfaces/IProductCard';
+import { IProductData } from 'interfaces/IProductData';
 
 import ProductCard from 'components/ProductCard';
 
 import { List, Item } from './LineCategory.styles';
 
 interface LineCategoryProps {
-  list: IProductCard[];
+  list: IProductData[];
 }
 
 const LineCategory = ({ list }: LineCategoryProps) => {
