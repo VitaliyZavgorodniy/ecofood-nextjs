@@ -1,7 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import Header from "components/Header";
-import styled from "styled-components";
+import Header from 'components/Header';
+import styled from 'styled-components';
+import Cart from 'components/Cart';
 
 interface LayoutProps {
   title: string;
@@ -13,11 +14,12 @@ const MainLayout = ({ title, description, children }: LayoutProps) => (
   <>
     <Head>
       <title>{title}</title>
-      <meta name='description' content={description} />
-      <link rel='icon' href='/favicon.ico' />
+      <meta name="description" content={description} />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <Header />
+    <Cart />
 
     <Main>{children}</Main>
   </>

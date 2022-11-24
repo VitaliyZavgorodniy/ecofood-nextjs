@@ -7,8 +7,8 @@ import LineCategory from 'components/LineCategory';
 const DEFAULTLIST = [
   {
     id: '1',
-    price: 4.00,
-    discount: 6.00,
+    price: 4.0,
+    discount: 6.0,
     weight: 500,
     rating: 4.5,
     image: 'img',
@@ -17,8 +17,8 @@ const DEFAULTLIST = [
   },
   {
     id: '2',
-    price: 9.80,
-    discount: 11.80,
+    price: 9.8,
+    discount: 11.8,
     weight: 500,
     rating: 4.5,
     image: 'img',
@@ -27,8 +27,8 @@ const DEFAULTLIST = [
   },
   {
     id: '3',
-    price: 6.80,
-    discount: 9.80,
+    price: 6.8,
+    discount: 9.8,
     weight: 500,
     rating: 4,
     image: 'img',
@@ -37,8 +37,8 @@ const DEFAULTLIST = [
   },
   {
     id: '4',
-    price: 8.00,
-    discount: 10.00,
+    price: 8.0,
+    discount: 10.0,
     weight: 500,
     rating: 5,
     image: 'img',

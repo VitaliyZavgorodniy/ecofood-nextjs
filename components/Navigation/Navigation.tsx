@@ -1,11 +1,13 @@
-import styled from "styled-components";
-import { breakpoints } from "constants/breakpoints";
+import styled from 'styled-components';
+import { breakpoints } from 'constants/breakpoints';
 
-import { CgMenuGridO } from "react-icons/cg";
+import { CgMenuGridO } from 'react-icons/cg';
 
-import Logo from "components/Logo";
-import SearchInput from "components/UI-kit/inputs/SearchInput";
-import ClearButton from "components/UI-kit/buttons/ClearButton";
+import Logo from 'components/Logo';
+import SearchInput from 'components/UI-kit/inputs/SearchInput';
+import ClearButton from 'components/UI-kit/buttons/ClearButton';
+
+import CartButton from 'components/CartButton';
 
 const Navigation = () => (
   <Nav>
@@ -15,16 +17,16 @@ const Navigation = () => (
         <SearchInput />
       </InputContainer>
       <ClearButton
-        title='Categories'
+        title="Categories"
         icon={<CgMenuGridO />}
-        onClick={() => console.log("go cat")}
+        onClick={() => console.log('go cat')}
       />
     </Wrapper>
 
     <Wrapper>
       <div>Bonus</div>
       <div>User</div>
-      <div>Cart</div>
+      <CartButton />
     </Wrapper>
   </Nav>
 );
